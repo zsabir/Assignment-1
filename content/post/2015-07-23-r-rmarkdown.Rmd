@@ -22,7 +22,7 @@ The report is based on the data of how people vote for federal elections from th
 
 
 ```{r, echo=FALSE, include=FALSE}
-#Loading data as named ces2019_phone.
+# Loading data as named ces2019_phone.
 get_ces("ces2019_phone")
 
 ```
@@ -37,6 +37,7 @@ head(ces2019_phone)
 ces2019_phone<-
   ces2019_phone%>%
   filter(q9>0)
+
 # Selecting two variables(the intrerest on vote and gender) from all variables.
 ces2019_phone<-
   ces2019_phone%>%
@@ -48,6 +49,7 @@ ces2019_phone<-
 # Calculating the basic statistical term of income to investigate how is people's interest on voting.
 ces2019_phone%>%summarise(mean_interest<-mean(q9), lowest<- min(q9), median_interest<-median(q9))
 ```
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # Making a bar graph since the interest is rated from 0-10, which is categorical variable.
 ces2019_phone%>%
@@ -65,6 +67,7 @@ ces2019_phone%>%
 
 ## Graph discussion
 There are two bar graphs, which is based on how much people have interest in voting for federal election and their gender. The first graph is about the interest on voting for federal election, and the graph shows there are lots of people who enjoys voting for election which would be the ideal situation.The second graph is the gender of the people who votes for the election and there are few transgender people, and the female percentage is higher than male. However, there are still lots of people who hasn't given their gender, it would be the majority of these groups of people.
+
 # Main discussion
 From the above, it is revealing that the election result are quite accurate since there are lots of people who are interested in voting for federal election. Those who aren't interested are still exist but they are minority which still makes a good election results at the end. However, the graph of gender reveals there are more female than male which may influence the result. For example, if the women are the majority, what if they have basic instincts to just vote for women candidates? There are lots of differences between female and male, it would be best if they are equally distributed and not one of them is represented as the majority. However, there's still some amount of possibility that the graph would be look different if the person who didn't admit their gender could fulfill the survey. The transgender group in Canada are very less as compared to female and male, so it is fine at this point if the transgender people are less on voting because there are less transgender people in Canada.
 
